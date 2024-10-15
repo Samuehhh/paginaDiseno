@@ -1,0 +1,170 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fondo oscuro */
+    color: white;
+}
+
+/* Barra de navegación fija */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(38, 70, 83, 0.8); /* Semi-transparente */
+    padding: 10px 0;
+    text-align: center;
+    z-index: 10;
+}
+nav a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+a:hover {
+    transform:translateY(-3px);
+    transition-duration: 600ms;
+    transition-timing-function: ease-in-out;
+}
+
+header {
+    background: url('montaña.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding-top: 80px; /* Espacio para la barra de navegación */
+}
+
+/* Estilos para el h1 y p con sombra sutil */
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(242, 92, 5, 0.5); /* Sombra sutil anaranjada */
+}
+
+header p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px rgba(242, 92, 5, 0.5); /* Sombra sutil anaranjada */
+}
+
+header a {
+    display: inline-block;
+    background-color: #dbd8ed;
+    color: #121212;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+header a:hover {
+    background-color: #FF763B;
+}
+
+/* Sección de servicios */
+section.services {
+    padding: 60px 20px;
+    background-color: #2A2A2A;
+    text-align: center;
+}
+section.services h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: white; /* Letras blancas */
+    text-shadow: 2px 2px 5px rgba(242, 92, 5, 0.5); /* Sombra sutil anaranjada */
+    margin-bottom: 40px;
+}
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.service-card {
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.service-card h3 {
+    font-size: 1.8rem;
+    color: #F25C05;
+    margin-bottom: 10px;
+}auto
+.service-card p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* Sección de testimonios */
+section.testimonials {
+    padding: 60px 20px;
+    background-color: #121212; /* Cambiado para mejor armonía */
+    color: white;
+    text-align: center;
+}
+section.testimonials h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(242, 92, 5, 0.5);
+    margin-bottom: 40px;
+}
+.testimonials-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.testimonial {
+    background-color: #2A2A2A;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.testimonial img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+.testimonial p {
+    color: #ddd;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+}
+footer a {
+    background-color: #F25C05;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+footer a:hover {
+    background-color: #FF763B;
+}
