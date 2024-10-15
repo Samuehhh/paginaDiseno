@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expediciones de Escalada</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Barra de navegación -->
     <nav>
@@ -18,7 +17,7 @@
         <a href="#expediciones">Expediciones</a>
         <a href="#testimonios">Testimonios</a>
         <a href="#contacto">Reservas</a>
-        <a href="#sobre-nosotros">Sobre Nosotros</a>
+        <a href="index2.html">Sobre Nosotros</a>
     </nav>
 
     <!-- Encabezado -->
@@ -26,7 +25,6 @@
         <h1>Conquista la cumbre, supera tus límites</h1>
         <p>Descubre nuestras expediciones de escalada para todos los niveles</p>
         <a href="#expediciones">Explora</a>
-        
     </header>
 
     <!-- Sección de Servicios -->
@@ -46,7 +44,7 @@
                 <p>Escala las montañas más desafiantes del mundo.</p>
             </div>
         </div>
-        <a href="#contacto">Reservas</a>
+        <a href="#contacto">Reservar</a>
     </section>
 
     <!-- Sección de Testimonios -->
@@ -55,22 +53,109 @@
         <div class="testimonials-container">
             <div class="testimonial">
                 <img src="cliente1.jpg" alt="Testimonio 1">
-                <p>xxxxxxx</p>
+                <p>"Una experiencia inolvidable, las vistas eran increíbles y la guía fue muy profesional." - Juan P.</p>
             </div>
             <div class="testimonial">
                 <img src="cliente2.jpg" alt="Testimonio 2">
-                <p>xxxxxxx</p>
+                <p>"Fue mi primera vez escalando y me sentí segura todo el tiempo. ¡Ya quiero repetir!" - Ana G.</p>
             </div>
             <div class="testimonial">
                 <img src="cliente3.jpg" alt="Testimonio 3">
-                <p>xxxxxxxxxxxxx</p>
+                <p>"Si buscas aventuras extremas, no te lo puedes perder. Excelente organización y rutas." - Carlos M.</p>
             </div>
         </div>
     </section>
 
-    <!-- Llamado a la acción -->
+    
+
+    <section class="reservas" id="contacto">
+        <h2>Reserva tu Aventura</h2>
+        <p>Rellena el siguiente formulario para reservar tu próxima expedición de escalada con nosotros.</p>
+        <form action="procesar_reserva.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="expedicion">Selecciona tu Expedición:</label>
+            <select id="expedicion" name="expedicion">
+                <option value="principiantes">Principiantes</option>
+                <option value="intermedios">Intermedios</option>
+                <option value="avanzados">Avanzados</option>
+            </select>
+
+            
+    
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Especifica algún detalle adicional"></textarea>
+            <a href="#reserva">Reservar</a>
+        </form>
+    </section>
+
+        <!-- Nueva Sección de Reservas (Formulario + Carrito) -->
+        <section class="reservas" id="contacto">
+            <h2>Opciones de reservas</h2>
+    
+            <div class="container">
+                <!-- Formulario de Reserva -->
+                <div class="formulario" id="reserva">
+                    
+                    <form action="#" method="POST">
+                        <h3>Formulario de Reserva</h3>
+                        <label for="ruta">Seleccione la Ruta:</label>
+                        <select id="ruta" name="ruta">
+                            <option value="ruta1">Ruta 1 - Montaña A</option>
+                            <option value="ruta2">Ruta 2 - Montaña B</option>
+                            <option value="ruta3">Ruta 3 - Montaña C</option>
+                        </select>
+    
+                        <div class="extras">
+                            <h4>Traslado:</h4>
+                            <label for="traslado">Traslado (+10€)</label><br>
+                            <input type="checkbox" id="traslado" name="traslado" value="traslado">
+                            
+    
+                            <h4>Alquiler de Material:</h4>
+                            <label for="material">Alquiler de Material (+15€)</label><br>
+                            <input type="checkbox" id="material" name="material" value="material">
+                          
+    
+                            <h4>Guía:</h4>
+                            <label for="guia">Guía (+20€)</label>
+                            <input type="checkbox" id="guia" name="guia" value="guia">
+                            
+                        </div>
+    
+                        <label for="comentarios">Comentarios:</label>
+                        <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escriba aquí sus comentarios..."></textarea>
+    
+                        <a href="#home">Enviar reserva</a>
+                    </form>
+                </div>
+    
+                <!-- Carrito de Compras -->
+                <div class="carrito">
+                    <h3>Carrito de Compras</h3>
+                    <p>Ruta seleccionada: <span id="rutaSeleccionada">Ruta 1</span></p>
+                    <h4>Opciones adicionales:</h4>
+                    <p>Traslado: <span id="trasladoSeleccionado">No</span></p>
+                    <p>Alquiler de Material: <span id="materialSeleccionado">No</span></p>
+                    <p>Guía: <span id="guiaSeleccionado">No</span></p>
+                    <h4>Precio Total: <span id="precioTotal">0€</span></h4>
+                </div>
+            </div>
+        </section>
+    
+
+    <!-- Pie de página -->
     <footer>
-       
+        <p>&copy; 2024 Expediciones de Escalada. Todos los derechos reservados.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">Twitter</a>
+        </div>
     </footer>
 </body>
 </html>

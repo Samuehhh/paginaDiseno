@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Fondo oscuro */
+    background-color: #121212;
     color: white;
 }
 
@@ -11,7 +11,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(38, 70, 83, 0.8); /* Semi-transparente */
+    background-color: rgba(38, 70, 83, 0.8);
     padding: 10px 0;
     text-align: center;
     z-index: 10;
@@ -29,16 +29,15 @@ nav h1 {
     font-weight: bold;
 }
 
-
 a:hover {
-    transform:translateY(-3px);
+    transform: translateY(-3px);
     transition-duration: 600ms;
     transition-timing-function: ease-in-out;
 }
 
 header {
     background: url('montaña.png') no-repeat center center/cover;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,21 +45,22 @@ header {
     text-align: center;
     color: white;
     position: relative;
-    padding-top: 80px; /* Espacio para la barra de navegación */
+ 
+    D
 }
 
-/* Estilos para el h1 y p con sombra sutil */
+/* Estilos para el h1 y p con sombra */
 header h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
     margin: 0;
-    text-shadow: 2px 2px 5px rgba(242, 92, 5, 0.5); /* Sombra sutil anaranjada */
+    text-shadow: 2px 2px 5px rgba(242, 92, 5, 0.5); /* Sombra naranja */
 }
 
 header p {
     font-size: 1.5rem;
     margin: 20px 0;
-    text-shadow: 2px 2px 5px rgba(242, 92, 5, 0.5); /* Sombra sutil anaranjada */
+    text-shadow: 2px 2px 5px rgba(242, 92, 5, 0.5); /* Sombra naranja */
 }
 
 header a {
@@ -77,17 +77,32 @@ header a:hover {
     background-color: #FF763B;
 }
 
+section a {
+    display: inline-block;
+    background-color: #dbd8ed;
+    color: #121212;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+section a:hover {
+    background-color: #FF763B;
+}
+
 /* Sección de servicios */
 section.services {
     padding: 60px 20px;
+    background: url('fondo-testimonios.jpg') no-repeat center center/cover;
     background-color: #2A2A2A;
     text-align: center;
 }
 section.services h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
-    color: white; /* Letras blancas */
-    text-shadow: 2px 2px 5px rgba(242, 92, 5, 0.5); /* Sombra sutil anaranjada */
+    color: white;
+    text-shadow: 2px 2px 5px rgba(242, 92, 5, 0.5); /* Sombra naranja */
     margin-bottom: 40px;
 }
 .services-container {
@@ -107,7 +122,7 @@ section.services h2 {
     font-size: 1.8rem;
     color: #F25C05;
     margin-bottom: 10px;
-}auto
+}
 .service-card p {
     font-size: 1rem;
     color: #ddd;
@@ -116,10 +131,24 @@ section.services h2 {
 /* Sección de testimonios */
 section.testimonials {
     padding: 60px 20px;
-    background-color: #121212; /* Cambiado para mejor armonía */
+    background: url('fondo-testimonios.jpg') no-repeat center center/cover;
+    background-color: #121212;
     color: white;
     text-align: center;
+    position: relative;
 }
+
+section.testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
 section.testimonials h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
@@ -128,6 +157,8 @@ section.testimonials h2 {
     margin-bottom: 40px;
 }
 .testimonials-container {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -140,7 +171,14 @@ section.testimonials h2 {
     width: 250px;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
+
+/* Efecto de elevación */
+.testimonial:hover {
+    transform: translateY(-10px);
+}
+
 .testimonial img {
     border-radius: 50%;
     width: 80px;
@@ -150,6 +188,8 @@ section.testimonials h2 {
 .testimonial p {
     color: #ddd;
 }
+
+
 
 /* Footer */
 footer {
@@ -167,4 +207,151 @@ footer a {
 }
 footer a:hover {
     background-color: #FF763B;
+}
+
+/* Sección de Reservas */
+section.reservas {
+    padding: 60px 20px;
+    background-color: #2A2A2A;
+    text-align: center;
+}
+
+section.reservas h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(242, 92, 5, 0.5);
+    margin-bottom: 20px;
+}
+
+section.reservas p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 1.1rem;
+    color: #F25C05;
+    margin-top: 10px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #F25C05;
+    border-radius: 5px;
+    background-color: #121212;
+    color: white;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #F25C05;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #FF763B;
+}
+
+/* Estilos para el contenedor de reservas y carrito */
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.formulario, .carrito {
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la sección de Carrito */
+.carrito h3, .formulario h3 {
+    font-size: 1.8rem;
+    color: #F25C05;
+    margin-bottom: 20px;
+}
+
+.carrito p, .carrito h4 {
+    color: #ddd;
+    font-size: 1rem;
+}
+
+.carrito span {
+    font-weight: bold;
+    color: #F25C05;
+}
+
+ /* Estilos adicionales para la sección de "Sobre Nosotros" */
+ .about-us {
+    position: relative;
+    background: url('sobre-nosotros.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.about-us-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+}
+
+.about-us h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+ /* Ajuste de estilos del footer */
+ footer {
+    padding: 10px 0; 
+    background-color: #200f00;
+    color: white;
+    text-align: center;
+    margin-top: -20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer .social-media {
+    margin-top: 10px; 
 }
